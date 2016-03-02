@@ -1,0 +1,20 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.welcome.genesmit.myapplication.MainFragment"
+    android:id="@+id/fragment_main">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home Fragment"
+        android:padding="5dp"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:id="@+id/textView1"
+        android:background="#475bce"
+        android:layout_gravity="center" />
+
+</FrameLayout>

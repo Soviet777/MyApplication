@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        // Application name.
+        <string name="app_name">CB-INTERIOR</string>
+
+        // Open or Close Drawer.
+        <string name="navigation_drawer_open">Open navigation drawer</string>
+        <string name="navigation_drawer_close">Close navigation drawer</string>
+
+        // Options Menu Items.
+        <string name="quit">Quit App</string>
+
+        // Nav header items.
+        <string name="main_text">The Blinds Specialist.</string>
+        <string name="title_vertical">Vertical Blinds</string>
+        <string name="title_horizontal">Horizontal Blinds</string>
+        <string name="title_communicate">Communicate</string>
+        <string name="title_share">Share</string>
+        <string name="header_image">contentDescription</string>
+    </resources>
