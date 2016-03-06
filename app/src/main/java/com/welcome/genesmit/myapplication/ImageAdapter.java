@@ -1,6 +1,7 @@
 package com.welcome.genesmit.myapplication;
 
 import android.content.Context;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -35,9 +36,14 @@ public class ImageAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ImageView imageView;
         if (convertView == null) {
+
+            DisplayMetrics metrics = mContext.getResources()
+                    .getDisplayMetrics();
+            int h = mContext.getResources().getDisplayMetrics().densityDpi;
+
             // if it's not recycled, initialize some attributes
             imageView = new ImageView(mContext);
-            imageView.setLayoutParams(new GridView.LayoutParams(250, 250));
+            imageView.setLayoutParams(new GridView.LayoutParams(h,h));
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             imageView.setRotation(90);
             imageView.setPadding(8, 8, 8, 8);
@@ -107,5 +113,5 @@ public class ImageAdapter extends BaseAdapter {
             R.drawable.tamara_rust,
             R.drawable.vte_vt1,
             R.drawable.vte_vt6,
-            R.drawable.vte_vt7,};
+            R.drawable.vte_vt7 };
 }

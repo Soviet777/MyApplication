@@ -5,15 +5,16 @@
     tools:context=".HorizontalBlindsFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SlideShow Fragment"
-        android:padding="5dp"
-        android:textColor="#ffffff"
-        android:textSize="20sp"
-        android:id="@+id/textView"
-        android:background="#4a77b7"
-        android:layout_gravity="center" />
-
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/grid2"
+        android:columnWidth="180dp"
+        android:numColumns="auto_fit"
+        android:layout_marginTop="5dp"
+        android:verticalSpacing="5dp"
+        android:horizontalSpacing="10dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        />
 </FrameLayout>

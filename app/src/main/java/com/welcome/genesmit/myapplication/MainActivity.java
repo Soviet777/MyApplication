@@ -24,12 +24,13 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // Set the fragment initially
-        MainFragment fragment = new MainFragment();
-        android.support.v4.app.FragmentTransaction fragmentTransaction =
-                getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_container, fragment);
-        fragmentTransaction.commit();
-
+        if(savedInstanceState == null) {
+            MainFragment fragment = new MainFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.commit();
+        }
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -97,14 +98,14 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment_main, fragment);
             fragmentTransaction.commit();
         }
-          else if  (id == R.id.nav_gallery) {
+          else if  (id == R.id.nav_vertical_blinds) {
             VerticalBlindsFragment fragment = new VerticalBlindsFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_horizontal_blinds) {
            HorizontalBlindsFragment fragment = new HorizontalBlindsFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
