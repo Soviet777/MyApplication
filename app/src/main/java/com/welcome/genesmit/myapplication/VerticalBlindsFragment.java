@@ -12,7 +12,7 @@ import android.widget.GridView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class VerticalBlinds extends Fragment {
+public class VerticalBlindsFragment extends Fragment {
     /*This is the image array*/
     public Integer[] mThumbIds = {
             R.drawable.athena_cream,
@@ -100,9 +100,6 @@ public class VerticalBlinds extends Fragment {
             "fern_ivory",
             "fern_navy",
             "glacier_charcoal",
-            "img_0092",
-            "img_0093",
-            "img_0094",
             "kalahari_oatmeal",
             "maggie_fawn",
             "maggie_grey",
@@ -137,7 +134,7 @@ public class VerticalBlinds extends Fragment {
             "vte_vt7",
     };
 
-    public VerticalBlinds() {
+    public VerticalBlindsFragment() {
         // Required empty public constructor
     }
 
