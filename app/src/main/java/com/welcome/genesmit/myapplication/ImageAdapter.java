@@ -30,6 +30,11 @@ public class ImageAdapter extends BaseAdapter {
         this.mnames = names;
 
     }
+    public class Holder
+    {
+        TextView tv;
+        ImageView img;
+    }
 
     public int getCount() {
         return mThumbids.length;
@@ -51,21 +56,22 @@ public class ImageAdapter extends BaseAdapter {
         LayoutInflater inflater = (LayoutInflater) mContext
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
+            Holder holder=new Holder();
 
-
-/* Initialising the gridview **/
+/* Initialising the grid view **/
             grid = inflater.inflate(R.layout.vertical_texts, null);
         /* referencing the TextView and ImageView */
-            TextView textView = (TextView) grid.findViewById(R.id.grid_text);
-            ImageView imageView = (ImageView)grid.findViewById(R.id.grid_image);
+            holder.tv = (TextView) grid.findViewById(R.id.grid_text);
+            holder.img = (ImageView)grid.findViewById(R.id.grid_image);
 
             int h = mContext.getResources().getDisplayMetrics().densityDpi;
-            imageView.setLayoutParams(new LinearLayout.LayoutParams(h, h));
-            imageView.setRotation(90);
+            holder.img.setLayoutParams(new LinearLayout.LayoutParams(h,h));
+            holder.img.setRotation(90);
+        holder.img.setScaleType(ImageView.ScaleType.CENTER_CROP);
         /* Setting the name of the image */
-            textView.setText(mnames[position]);
+            holder.tv.setText(mnames[position]);
         /*setting the image */
-            Picasso.with(mContext).load(mThumbids[position]).into(imageView);
+            Picasso.with(mContext).load(mThumbids[position]).into(holder.img);
 
 
         /*return the view */
@@ -75,3 +81,4 @@ public class ImageAdapter extends BaseAdapter {
 
 
 }
+
