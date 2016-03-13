@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.FrameLayout;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -65,7 +66,7 @@ public class ImageAdapter extends BaseAdapter {
             holder.img = (ImageView)grid.findViewById(R.id.grid_image);
 
             int h = mContext.getResources().getDisplayMetrics().densityDpi;
-            holder.img.setLayoutParams(new LinearLayout.LayoutParams(h,h));
+            holder.img.setLayoutParams(new FrameLayout.LayoutParams(h,h));
             holder.img.setRotation(90);
         holder.img.setScaleType(ImageView.ScaleType.CENTER_CROP);
         /* Setting the name of the image */
